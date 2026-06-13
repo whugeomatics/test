@@ -5,7 +5,7 @@
     "allowedTriggers": ["comment", "label", "api", "scan"]
   },
   "paths": {
-    "allowed": ["src/", "test/", "tests/", "pom.xml"],
+    "allowed": ["src/", "test/", "tests/"],
     "blocked": [".github/", "infra/", "terraform/", ".env", ".npmrc"]
   },
   "commands": {
