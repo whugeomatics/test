@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "sources": {
+    "allowedTypes": ["github", "gitlab", "code-review", "scan-finding"],
+    "allowedTriggers": ["webhook", "api"]
+  },
+  "paths": {
+    "allowed": ["src/", "test/", "tests/", "package.json"],
+    "blocked": [".github/", "infra/", "terraform/", ".env", ".npmrc"]
+  },
+  "commands": {
+    "allowAutoDetect": true,
+    "test": "mvn test",
+    "build": "mvn clean package"
+  },
+  "changeRequest": {
+    "autoCreate": true
+  }
+}
