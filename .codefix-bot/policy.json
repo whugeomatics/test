@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "sources": {
-    "allowedTypes": ["github", "gitlab", "code-review", "scan-finding"],
-    "allowedTriggers": ["webhook", "api"]
+    "allowedTypes": ["github-webhook", "code-review", "scan-finding"],
+    "allowedTriggers": ["comment", "label", "api", "scan"]
   },
   "paths": {
-    "allowed": ["src/", "test/", "tests/", "package.json"],
+    "allowed": ["src/", "test/", "tests/", "pom.xml"],
     "blocked": [".github/", "infra/", "terraform/", ".env", ".npmrc"]
   },
   "commands": {
     "allowAutoDetect": true,
-    "test": "mvn test",
+    "test": "mvn clean test",
     "build": "mvn clean package"
   },
   "changeRequest": {
